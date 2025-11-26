@@ -25,7 +25,7 @@ export default async function Home() {
       <div className="flex justify-center">
         <Image
           src="https://vdakuindv7.ufs.sh/f/11284QhVzXDu37GzIhVceVwxmriZpH7hOYaAFykBblfD2oL5"
-          alt="Sammy's Avatar"
+          alt="Sammy&apos;s Avatar"
           width={102}
           height={102}
           className="h-30 w-30 rounded-full ring-2 ring-primary/40"
@@ -42,11 +42,11 @@ export default async function Home() {
           About Me -
         </h3>
         <p className="mt-2 max-w-3xl">
-          In my free time, I'm usually self-learning / practicing DevOps projects 
+          In my free time, I&apos;m usually self-learning / practicing DevOps projects 
           with Python, Go, some C, or messing around in NeoVim, and probably playing around with my Arch Linux / Omarchy layout.
           <br />
           <br />
-          OR I'm messing around with my homelab testing out projects to run behind my reverse proxy, 
+          OR I&apos;m messing around with my homelab testing out projects to run behind my reverse proxy, 
           or expanding my server rack, or running ethernet cable through the attic for PoE cameras, stuff like that.
           <br />
           <br />
@@ -63,7 +63,7 @@ export default async function Home() {
         Dev Showcase -
       </h3>
       <p className="mb-3 max-w-xl text-base leading-relaxed text-muted-foreground">
-        Here's some of the tech involved with making this site:
+        Here&apos;s some of the tech involved with making this site:
       </p>
       <div className="flex flex-wrap items-center justify-center space-x-4 ">
         <Image
