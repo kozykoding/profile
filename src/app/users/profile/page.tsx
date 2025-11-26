@@ -9,7 +9,6 @@ import SecurityWidgetClient from "./SecurityWidgetClient";
 import SessionWidgetClient from "./SessionWidgetClient";
 import OrgSwitcherWidgetClient from "./OrgSwitcherWidgetClient";
 import { cookies } from "next/headers";
-import { LoFi } from "@/components/lo-fi/index"
 
 export default async function ProfilePage() {
   const { user, organizationId, sessionId } = await withAuth();
@@ -140,7 +139,7 @@ export default async function ProfilePage() {
     <div className="container mt-4 p-4">
       <h1 className="text-2xl font-bold mb-4">Manage Your Profile</h1>
       <p className="text-muted-foreground mb-4">
-        I'm utilizing WorkOS for authentication. 
+        I&apos;m utilizing WorkOS for authentication. 
         <br />
         I can work with numerous authentication methods, this is just one of the better solutions.
       </p>
