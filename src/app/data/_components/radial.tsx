@@ -45,7 +45,9 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function RadialExample() {
-  const totalVisitors = chartData[0].desktop + chartData[0].mobile
+  const firstData = chartData[0]
+  if (!firstData) return null
+  const totalVisitors = firstData.desktop + firstData.mobile
 
   return (
     <Item className="shadow-lg">
