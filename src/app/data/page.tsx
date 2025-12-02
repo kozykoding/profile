@@ -11,9 +11,9 @@ export default function DataPage() {
       </h1>
 
       <div className="flex grid grid-cols-4 mx-auto">
-        <p className="p-2 col-span-2">
-          This is just a small example of transformed data to present to stakeholders.
-        </p>
+        <h2 className="text-primary font-extrabold text-2xl p-2 col-span-2 mt-8">
+          This is just a small example of data visualization I can present to stakeholders.
+        </h2>
         <div className="p-2">
           <LineExample />
         </div>

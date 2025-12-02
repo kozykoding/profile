@@ -10,6 +10,11 @@ import vercel from "~/assets/vercel.svg";
 import nextjs from "~/assets/nextjs.svg";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export default async function Home() {
   //const { user } = await withAuth();
@@ -23,15 +28,28 @@ export default async function Home() {
     <section className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 ">
       {/* Avatar */}
       <div className="flex justify-center">
-        <Image
-          src="https://vdakuindv7.ufs.sh/f/11284QhVzXDu37GzIhVceVwxmriZpH7hOYaAFykBblfD2oL5"
-          alt="Sammy&apos;s Avatar"
-          width={102}
-          height={102}
-          className="h-30 w-30 rounded-full ring-2 ring-primary/40"
-          priority
-        />
-      </div>
+            <Tooltip>
+        <TooltipTrigger asChild>
+  <Link
+    href="https://www.linkedin.com/in/samuel-lee-690891b4/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image
+      src="https://vdakuindv7.ufs.sh/f/11284QhVzXDu37GzIhVceVwxmriZpH7hOYaAFykBblfD2oL5"
+      alt="Sammy's Avatar"
+      width={102}
+      height={102}
+      className="h-30 w-30 rounded-full ring-2 ring-primary/40"
+      priority
+    />
+  </Link>
+  </TooltipTrigger>
+      <TooltipContent>
+        <p>LinkedIn</p>
+      </TooltipContent>
+    </Tooltip>
+</div>
 
       {/* Title + Intro */}
       <div>
@@ -52,7 +70,7 @@ export default async function Home() {
           <br />
         </p>
         <p className="font-bold text-lg text-primary/90 dark:text-primary text-center items-center">
-          Psssst... [Sign In Up Top] to see my authentication integration, and to access hidden links, explore snippets of my projects, and more!
+          Psssst... [Sign In Up Top] to see my authentication integration and to access hidden links!
         </p>
       </div>
     </section>
@@ -66,6 +84,8 @@ export default async function Home() {
         Here&apos;s some of the tech involved with making this site:
       </p>
       <div className="flex flex-wrap items-center justify-center space-x-4 ">
+        <Tooltip>
+        <TooltipTrigger asChild>
         <Image
           src={logo}
           alt="Bun logo"
@@ -73,6 +93,13 @@ export default async function Home() {
           height={120}
           className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
         />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>Bun Runtime</p>
+      </TooltipContent>
+    </Tooltip>
+            <Tooltip>
+        <TooltipTrigger asChild>
         <Image
           src={reactLogo}
           alt="React logo"
@@ -80,34 +107,13 @@ export default async function Home() {
           height={120}
           className="h-20 w-20 animate-[spin_20s_linear_infinite] p-2"
         />
-        <Image
-          src={ghostty}
-          alt="Ghostty logo"
-          width={120}
-          height={120}
-          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-        />
-        <Image
-          src={archlinux}
-          alt="Arch Linux logo"
-          width={120}
-          height={120}
-          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-        />
-        <Image
-          src={vercel}
-          alt="Vercel logo"
-          width={120}
-          height={120}
-          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-        />
-        <Image
-          src={tailwind}
-          alt="Tailwind logo"
-          width={120}
-          height={120}
-          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-        />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>React</p>
+      </TooltipContent>
+    </Tooltip>
+            <Tooltip>
+        <TooltipTrigger asChild>
         <Image
           src={nextjs}
           alt="NextJS logo"
@@ -115,6 +121,68 @@ export default async function Home() {
           height={120}
           className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
         />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>NextJS</p>
+      </TooltipContent>
+    </Tooltip>
+            <Tooltip>
+        <TooltipTrigger asChild>
+        <Image
+          src={ghostty}
+          alt="Ghostty logo"
+          width={120}
+          height={120}
+          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+        />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>Ghostty Terminal</p>
+      </TooltipContent>
+    </Tooltip>
+            <Tooltip>
+        <TooltipTrigger asChild>
+        <Image
+          src={archlinux}
+          alt="Arch Linux logo"
+          width={120}
+          height={120}
+          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+        />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>Arch Linux (btw...)</p>
+      </TooltipContent>
+    </Tooltip>
+            <Tooltip>
+        <TooltipTrigger asChild>
+        <Image
+          src={vercel}
+          alt="Vercel logo"
+          width={120}
+          height={120}
+          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+        />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>Vercel</p>
+      </TooltipContent>
+    </Tooltip>
+            <Tooltip>
+        <TooltipTrigger asChild>
+        <Image
+          src={tailwind}
+          alt="Tailwind logo"
+          width={120}
+          height={120}
+          className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+        />
+        </TooltipTrigger>
+      <TooltipContent>
+        <p>Tailwind CSS</p>
+      </TooltipContent>
+    </Tooltip>
+            
       </div>
     </section>
 

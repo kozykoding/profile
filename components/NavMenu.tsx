@@ -126,7 +126,7 @@ export function NavMenu() {
           </NavigationMenuItem>
           
           }
-          {user &&
+          {/*{user &&
           <NavigationMenuItem className="hidden md:block">
             <NavigationMenuTrigger>Authentication</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -140,7 +140,7 @@ export function NavMenu() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          } 
+          } */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild

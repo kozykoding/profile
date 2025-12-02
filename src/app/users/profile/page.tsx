@@ -38,7 +38,7 @@ export default async function ProfilePage() {
   const cookieStore = await cookies();
   const sessionData = cookieStore.get("wos-session")?.value;
 
-  let isProfilesEnabled = false;
+  let isProfilesEnabled = true;
   let featureFlags: string[] = [];
 
   // Evaluate feature flags from sealed session cookie per WorkOS docs
@@ -81,7 +81,6 @@ export default async function ProfilePage() {
   const tokenResponse = await workos.widgets.getToken({
     organizationId,
     userId: user.id,
-    scopes: ["widgets:users-table:manage"],
   });
 
   let authToken: string;
@@ -117,23 +116,7 @@ export default async function ProfilePage() {
     return undefined;
   })();
 
-  // If the profile feature flag is not enabled, show a message
-  if (!isProfilesEnabled) {
-    return (
-      <div className="container mt-4 p-4">
-        
-        <div className="p-6 text-center">
-          <h2 className="mb-4 text-2xl font-bold">
-            Profile Feature Not Available
-          </h2>
-          <p className="text-muted-foreground">
-            The profile feature is currently not enabled for your account.
-            Please contact your administrator if you believe this is an error.
-          </p>
-        </div>
-      </div>
-    );
-  }
+
 
   return (
     <div className="container mt-4 p-4">
