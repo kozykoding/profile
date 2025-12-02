@@ -1,18 +1,18 @@
-import { AreaChartExample } from "./_components/areachart"
-import { BarChartExample } from "./_components/barchart"
-import { RadialExample } from "./_components/radial"
-import { LineExample } from "./_components/linechart"
+import { AreaChartExample } from "./_components/areachart";
+import { BarChartExample } from "./_components/barchart";
+import { RadialExample } from "./_components/radial";
+import { LineExample } from "./_components/linechart";
+import { TableExample } from "./_components/table";
 
 export default function DataPage() {
   return (
-    <div className="container p-2 mt-8">
-      <h1 className="text-2xl font-extrabold mb-4">
-        Data Visualization
-      </h1>
+    <div className="container mt-8 p-2">
+      <h1 className="mb-4 text-2xl font-extrabold">Data Visualization</h1>
 
-      <div className="flex grid grid-cols-4 mx-auto">
-        <h2 className="text-primary font-extrabold text-2xl p-2 col-span-2 mt-8">
-          This is just a small example of data visualization I can present to stakeholders.
+      <div className="mx-auto flex grid grid-cols-4">
+        <h2 className="text-primary col-span-2 mt-8 p-2 text-2xl font-extrabold">
+          This is just a small example of data visualization I can present to
+          stakeholders.
         </h2>
         <div className="p-2">
           <LineExample />
@@ -22,15 +22,17 @@ export default function DataPage() {
         </div>
       </div>
 
-      <div className="flex grid grid-cols-2 mx-auto">
+      <div className="mx-auto flex grid grid-cols-2">
         <div className="p-2">
           <AreaChartExample />
         </div>
         <div className="p-2">
           <BarChartExample />
         </div>
-        
+        <div className="col-span-2 p-2">
+          <TableExample />
+        </div>
       </div>
     </div>
-  )
+  );
 }
