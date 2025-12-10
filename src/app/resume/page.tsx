@@ -6,14 +6,15 @@ export default function ResumePage() {
     <main className="mx-auto w-full max-w-5xl px-6 py-6 print:px-8 print:py-6">
       {/* Top block global nav */}
       <div className="mb-4 border-b pb-3">
-        <h1 className="text-2xl font-semibold tracking-tight text-primary">
+        <h1 className="text-primary text-2xl font-semibold tracking-tight">
           Samuel Lee
         </h1>
         <p className="text-muted-foreground">
-          Reports / Data Analyst | Systems Administrator | DevOps Engineer
+          Software Engineer | Backend Developer | Data Analyst | Systems
+          Administrator
         </p>
-        <p className="mt-1 text-muted-foreground">
-          Sacramento, CA • 916.995.1849 • sammy@kozykoding.com
+        <p className="text-muted-foreground mt-1">
+          Sacramento, CA • sammy@kozykoding.com
         </p>
       </div>
 
@@ -30,11 +31,12 @@ export default function ResumePage() {
               "SQL",
               "Excel/Google Sheets",
               "Business Intelligence (BI)",
-              "Stakeholder communication",
+              "Software Engineer",
+              "Backend Developer",
             ].map((s) => (
               <span
                 key={s}
-                className="rounded-full border px-2.5 py-1 text-xs text-muted-foreground"
+                className="text-muted-foreground rounded-full border px-2.5 py-1 text-xs"
               >
                 {s}
               </span>
@@ -42,72 +44,78 @@ export default function ResumePage() {
           </div>
 
           <SectionHeading>Professional Summary</SectionHeading>
-          <p className="text-sm leading-relaxed text-foreground/90">
-            Data analyst and systems administrator with experience in SQL, Excel / Google Sheets, 
-            Tableau, and Google Data / Looker Studio, and business intelligence (BI) reporting.. 
-            Skilled at extracting, cleaning, and analyzing data from multiple sources to build 
-            dashboards, forecasts, and automated reporting that support operational decisions 
-            in various business intelligence (BI) tools. Blend of analytics and infrastructure: 
-            design databases, develop in-house web applications, and manage Windows / Linux servers 
-            and networks. Known for maintaining 100% audit compliance and reducing operational 
-            costs through automation and in-house SaaS.
+          <p className="text-foreground/90 text-sm leading-relaxed">
+            Backend‑leaning Software Engineer with experience building internal
+            full‑stack web applications, REST APIs, and analytics/reporting
+            pipelines. Background spans Python, SQL, and TypeScript/Next.js plus
+            systems administration (Windows/Linux, networks, virtualization).
+            Skilled at designing databases, developing in‑house tools, and
+            automating reporting and infrastructure to reduce operational
+            overhead and improve data accuracy. Recently maintained 100% audit
+            compliance and cut manual reporting through in‑house SaaS and
+            automation.
           </p>
 
           <SectionHeading>Technical Skills</SectionHeading>
           <UL>
             <LI>
-              Analytics & Reporting: Excel, Google Sheets, Tableau, Google Data / Looker Studio, KPI dashboards, forecasting, data visualization, automated reporting
+              Languages & Backend: Python, Go, SQL, TypeScript, JavaScript
             </LI>
             <LI>
-              Programming & Data: SQL, PostgreSQL, SQL Server, SQLite, Python, data cleaning, query optimization, ETL
-            </LI>
-            
-            <LI>
-              Web Development: Next.js (TypeScript), React, JavaScript, full-stack development, responsive web design
+              Web & APIs: Next.js, React, REST APIs, full‑stack development,
+              responsive UI
             </LI>
             <LI>
-              Dev: Next.js/React (TypeScript/JS), Python, Go, C, APIs
+              Databases & Data: PostgreSQL, SQL Server, SQLite, query
+              optimization, ETL, data cleaning
             </LI>
             <LI>
-              Business & Productivity: Microsoft Office, Google Workspace, Workday, Salesforce
+              Analytics & BI: Excel, Google Sheets, Tableau, Looker Studio, KPI
+              dashboards, forecasting, automated reporting
             </LI>
             <LI>
-              Systems & Infrastructure: Windows Server, Linux (Arch, Debian), pfSense, Ubiquiti / UniFi, VLANs, firewall rules, DHCP / static IPs, network monitoring
+              Systems & Infra: Windows Server, Linux (Arch, Debian), Docker,
+              pfSense, Ubiquiti/UniFi, VLANs, firewall rules, DHCP/static IPs,
+              network monitoring
             </LI>
             <LI>
-              Virtualization & Servers: Hyper-V, VMware, Proxmox VE, Dell PowerEdge, JBOD arrays, virtual machine deployment, resource allocation, container management
+              Virtualization & Servers: Hyper‑V, VMware, Proxmox VE, JBOD
+              arrays, VM deployment, resource allocation, container management
             </LI>
             <LI>
-              Directory & Security: Active Directory, Group Policy, role-based access control, backup and recovery, disaster recovery planning, compliance auditing
+              Identity & Security: Active Directory, Group Policy, RBAC, backup
+              and recovery, disaster recovery planning, compliance auditing
             </LI>
-            <LI>Automation: scripting, scheduled reporting, workflow automation</LI>
+            <LI>
+              Tools: Microsoft Office, Google Workspace, Workday, Salesforce,
+              Git
+            </LI>
           </UL>
-
         </aside>
 
         {/* Main */}
         <section className="md:order-2">
           <SectionHeading className="mt-6 mb-4">Work Experience</SectionHeading>
           <Job
-            role="Systems Administrator / Operations Manager (Data & Reporting)"
+            role="Junior Software Engineer / Backend Developer (Data & Reporting)"
             meta="The Gun Range — Sacramento, CA | June 2023 – November 2025"
             bullets={[
-              "Consolidated sales, inventory, and staffing data from multiple systems into centralized reports and dashboards to track trends, KPIs, and operational performance.",
-              "Validated data integrity by designing comparable reports and cross-check processes, reducing reporting discrepancies.",
-              "Developed internal web applications for staff management, sales tracking, and inventory control, improving data accessibility and accuracy.",
-              "Implemented automated backup and disaster recovery procedures for reporting databases and application servers.",
-              "Maintained a 100% compliance rate on California DOJ and federal ATF audits by creating audit-ready reports and documentation.",
+              "Built and maintained internal web applications for staff management, sales tracking, and inventory control using Python, SQL, and Next.js/React, improving data accessibility and reducing manual spreadsheet work.",
+              "Designed and implemented database schemas and queries to consolidate sales, inventory, and staffing data from multiple systems into centralized reports and dashboards for KPI and trend monitoring.",
+              "Created automated ETL scripts and reporting pipelines in Python to extract, clean, and validate data, reducing reporting discrepancies and manual effort.",
+              "Implemented automated backup and disaster recovery procedures for reporting databases and application servers, reducing recovery time and data‑loss risk.",
+              "Maintained a 100% compliance rate on California DOJ and federal ATF audits by generating audit‑ready reports and documentation and ensuring data integrity across systems.",
             ]}
           />
 
           <Job
-            role="CEO / Technical Lead"
-            meta="Shinigami Auto / Ripples Events — Sacramento, CA | October 2020 – June 2023"
+            role="Founder / Full Stack Developer"
+            meta="Shinigami LLC / Ripples Events — Sacramento, CA | October 2020 – June 2023"
             bullets={[
-              "Designed and maintained PostgreSQL databases for inventory management and customer relationship management.",
-              "Built automated reporting for sales analysis, trend forecasting, and business intelligence using SQL and spreadsheet tools.",
-              "Implemented real-time inventory tracking with API integrations, improving stock accuracy and reducing stockouts.",
-              "Managed complete IT infrastructure, including network setup, security controls, and system administration to ensure data reliability.",
+              "Designed and maintained PostgreSQL databases for inventory management and customer relationship management, including schema design, indexing, and query optimization.",
+              "Built internal tools and automated reporting for sales analysis, trend forecasting, and business intelligence using SQL and spreadsheet automation.",
+              "Implemented real‑time inventory tracking via API integrations with third‑party systems, improving stock accuracy and reducing stockouts.",
+              "Managed complete IT infrastructure (networks, servers, security) to keep business systems available, secure, and reliable.",
             ]}
           />
 
@@ -115,7 +123,7 @@ export default function ResumePage() {
             role="Business Analyst"
             meta="Centene Corporation — Sacramento, CA | January 2019 – September 2020"
             bullets={[
-              "Created automated reporting solutions using PostgreSQL, Excel / Google Sheets, and data visualization tools (Tableau, Google Data / Looker Studio), reducing manual processing by 60%.",
+              "Built automated reporting solutions with PostgreSQL, Excel/Google Sheets, and BI tools (Tableau, Looker Studio), reducing manual processing by ~60% using Python scripts and SQL.",
               "Developed executive dashboards and KPI tracking systems to monitor operational efficiency and service levels.",
               "Analyzed large datasets to identify cost-saving opportunities and process improvements across operations.",
               "Translated analytical findings into presentations and reports for multiple department directors to drive data-informed decisions.",
@@ -142,10 +150,11 @@ export default function ResumePage() {
           <br />
           <SectionHeading>Certifications</SectionHeading>
           <UL>
+            <LI>Boot.Dev Python Certification</LI>
+            <LI>Boot.Dev Backend Development With C and Go (in progress)</LI>
             <LI>CompTIA Network+ (in progress)</LI>
             <LI>CompTIA Security+ (in progress)</LI>
           </UL>
-
         </section>
       </div>
 
@@ -175,7 +184,7 @@ function SectionHeading({
 }) {
   return (
     <h3
-      className={`text-xs font-semibold uppercase tracking-wide text-muted-foreground ${className}`}
+      className={`text-muted-foreground text-xs font-semibold tracking-wide uppercase ${className}`}
     >
       {children}
     </h3>
@@ -183,7 +192,7 @@ function SectionHeading({
 }
 
 function UL({ children }: { children: React.ReactNode }) {
-  return <ul className="ml-5 mt-2 list-disc space-y-1 text-sm">{children}</ul>;
+  return <ul className="mt-2 ml-5 list-disc space-y-1 text-sm">{children}</ul>;
 }
 function LI({ children }: { children: React.ReactNode }) {
   return <li className="text-foreground/90">{children}</li>;
@@ -200,9 +209,9 @@ function Job({
 }) {
   return (
     <div className="mb-4">
-      <div className="font-semibold text-foreground">{role}</div>
-      <div className="text-xs text-muted-foreground">{meta}</div>
-      <ul className="ml-5 mt-2 list-disc space-y-1 text-sm">
+      <div className="text-foreground font-semibold">{role}</div>
+      <div className="text-muted-foreground text-xs">{meta}</div>
+      <ul className="mt-2 ml-5 list-disc space-y-1 text-sm">
         {bullets.map((b, i) => (
           <li key={i} className="text-foreground/90">
             {b}
