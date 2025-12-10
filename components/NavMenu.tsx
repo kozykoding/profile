@@ -89,22 +89,39 @@ export function NavMenu() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem> */}
-          
-          {user && 
-          <NavigationMenuItem className="hidden md:block">
-            <NavigationMenuTrigger>Data Analytics</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[300px] gap-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/data">
-                      <div className="font-medium">Visualization</div>
-                      <div className="text-muted-foreground">
-                        Small example of data visuals.
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  {/*<NavigationMenuLink asChild>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
+              <Link href="/resume">Resume</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          {user && (
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/certs">Certs</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          )}
+          {user && (
+            <NavigationMenuItem className="hidden md:block">
+              <NavigationMenuTrigger>Data Analytics</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[300px] gap-4">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/data">
+                        <div className="font-medium">Visualization</div>
+                        <div className="text-muted-foreground">
+                          Small example of data visuals.
+                        </div>
+                      </Link>
+                    </NavigationMenuLink>
+                    {/*<NavigationMenuLink asChild>
                     <Link href="#">
                       <div className="font-medium">Documentation</div>
                       <div className="text-muted-foreground">
@@ -120,12 +137,11 @@ export function NavMenu() {
                       </div>
                     </Link>
                   </NavigationMenuLink>*/}
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          
-          }
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          )}
           {/*{user &&
           <NavigationMenuItem className="hidden md:block">
             <NavigationMenuTrigger>Authentication</NavigationMenuTrigger>
@@ -141,14 +157,6 @@ export function NavMenu() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           } */}
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="/resume">Resume</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
           {/*<NavigationMenuItem className="hidden md:block">
             <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
             <NavigationMenuContent>

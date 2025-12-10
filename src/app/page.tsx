@@ -35,9 +35,9 @@ export default async function Home() {
                 <Image
                   src="https://vdakuindv7.ufs.sh/f/11284QhVzXDu37GzIhVceVwxmriZpH7hOYaAFykBblfD2oL5"
                   alt="Sammy's Avatar"
-                  width={102}
-                  height={102}
-                  className="ring-primary/40 h-30 w-30 rounded-full ring-2"
+                  width={120}
+                  height={120}
+                  className="ring-primary/40 h-40 w-40 rounded-full ring-2"
                   priority
                 />
               </TooltipTrigger>
@@ -60,7 +60,7 @@ export default async function Home() {
                       alt="Github logo"
                       width={120}
                       height={120}
-                      className="h-10 w-10 p-2 transition-transform duration-300 hover:scale-105"
+                      className="h-12 w-12 p-2 transition-transform duration-300 hover:scale-125"
                     />
                   </Link>
                 </TooltipTrigger>
@@ -82,7 +82,7 @@ export default async function Home() {
                       alt="LinkedIn logo"
                       width={120}
                       height={120}
-                      className="h-10 w-10 p-2 transition-transform duration-300 hover:scale-105"
+                      className="h-12 w-12 p-2 transition-transform duration-300 hover:scale-125"
                     />
                   </Link>
                 </TooltipTrigger>
@@ -98,15 +98,15 @@ export default async function Home() {
             <h1 className="mb-4 text-center text-4xl font-extrabold tracking-tight sm:text-5xl">
               Sammy{": "}
               <span className="text-primary">
-                Software Enginer / DevOps / Analyst
+                Software Enginer / Backend Developer / Analyst
               </span>
             </h1>
             <h3 className="text-primary mt-4 text-xl font-bold">About Me -</h3>
             <p className="mt-2 max-w-3xl">
               In my free time, I&apos;m usually self-learning / practicing
-              DevOps projects with Python, Go, some C, or messing around in
-              NeoVim, and probably playing around with my Arch Linux / Omarchy
-              layout.
+              backend development projects with Python, Go, some C, or messing
+              around in NeoVim, and probably playing around with my Arch Linux /
+              Omarchy layout.
               <br />
               <br />
               OR I&apos;m messing around with my homelab testing out projects to
@@ -117,8 +117,11 @@ export default async function Home() {
               <br />
             </p>
             <p className="text-primary/90 dark:text-primary items-center text-center text-lg font-bold">
-              Psssst... [Sign In Up Top] to see my authentication integration
-              and to access hidden links!
+              Psssst...{" "}
+              <span className="text-destructive font-extrabold">
+                [Sign In Up Top]{" "}
+              </span>
+              to access hidden links & see my authentication integration!
             </p>
           </div>
         </section>
