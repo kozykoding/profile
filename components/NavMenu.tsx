@@ -97,16 +97,47 @@ export function NavMenu() {
               <Link href="/resume">Resume</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {user && (
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/certs">Certs</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          )}
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
+              <Link href="/certs">Certs</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem className="hidden md:block">
+            <NavigationMenuTrigger>Work</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[300px] gap-4">
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link href="https://kozyy.app/" target="_blank">
+                      <div className="font-medium">KozyyPM</div>
+                      <div className="text-muted-foreground">
+                        My Project Management app.
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                  {/*<NavigationMenuLink asChild>
+                    <Link href="#">
+                      <div className="font-medium">Documentation</div>
+                      <div className="text-muted-foreground">
+                        Learn how to use the library.
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
+                    <Link href="#">
+                      <div className="font-medium">Blog</div>
+                      <div className="text-muted-foreground">
+                        Read our latest blog posts.
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>*/}
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
           {user && (
             <NavigationMenuItem className="hidden md:block">
               <NavigationMenuTrigger>Data Analytics</NavigationMenuTrigger>
