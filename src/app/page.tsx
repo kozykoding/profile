@@ -170,8 +170,9 @@ export default async function Home() {
             <div className="border-border bg-card rounded-lg border p-4">
               <h4 className="text-lg font-semibold">Kozyhome</h4>
               <p className="text-muted-foreground mt-1 text-sm">
-                Personal site / UI playground built with Next.js. I use this to
-                test UI patterns, auth flows, and component libraries.
+                Personal site to keep track of bills / UI playground built with
+                Next.js. I use this to test UI patterns, and component
+                libraries.
               </p>
               <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
                 Stack: TypeScript, Next.js, Tailwind CSS
