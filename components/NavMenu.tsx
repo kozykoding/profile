@@ -118,6 +118,14 @@ export function NavMenu() {
                       </div>
                     </Link>
                   </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
+                    <Link href="https://kozyyffl.vercel.app/" target="_blank">
+                      <div className="font-medium">KozyyFFL</div>
+                      <div className="text-muted-foreground">
+                        My FFL SaaS app.
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
                   {/*<NavigationMenuLink asChild>
                     <Link href="#">
                       <div className="font-medium">Documentation</div>
