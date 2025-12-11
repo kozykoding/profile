@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 import logo from "~/assets/logo.svg";
 import reactLogo from "~/assets/react.svg";
@@ -11,7 +10,6 @@ import nextjs from "~/assets/nextjs.svg";
 import linkedin from "~/assets/linkedin.svg";
 import github from "~/assets/github.svg";
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Tooltip,
   TooltipContent,
@@ -19,13 +17,11 @@ import {
 } from "@/components/ui/tooltip";
 
 export default async function Home() {
-  //const { user } = await withAuth();
   const hello = await api.post.hello({ text: "from tRPC" });
-  //const welcomeMessage = user ? `Welcome ${user.firstName}!` : "Welcome";
 
   return (
     <HydrateClient>
-      <main className="container mx-auto mt-40 min-h-screen">
+      <main className="container mx-auto mt-10 min-h-screen">
         {/* HERO */}
         <section className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8">
           {/* Avatar */}
@@ -46,51 +42,50 @@ export default async function Home() {
               </TooltipContent>
             </Tooltip>
           </div>
-          <div className="flex justify-center">
-            <div className="flex">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href="https://github.com/kozykoding"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={github}
-                      alt="Github logo"
-                      width={120}
-                      height={120}
-                      className="h-12 w-12 p-2 transition-transform duration-300 hover:scale-125"
-                    />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Github</p>
-                </TooltipContent>
-              </Tooltip>
-            </div>
-            <div className="flex">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href="https://www.linkedin.com/in/samuel-lee-690891b4/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={linkedin}
-                      alt="LinkedIn logo"
-                      width={120}
-                      height={120}
-                      className="h-12 w-12 p-2 transition-transform duration-300 hover:scale-125"
-                    />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>LinkedIn</p>
-                </TooltipContent>
-              </Tooltip>
-            </div>
+
+          {/* Social links */}
+          <div className="flex justify-center gap-2">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="https://github.com/kozykoding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={github}
+                    alt="GitHub logo"
+                    width={120}
+                    height={120}
+                    className="h-12 w-12 p-2 transition-transform duration-300 hover:scale-125"
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>GitHub</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="https://www.linkedin.com/in/samuel-lee-690891b4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={linkedin}
+                    alt="LinkedIn logo"
+                    width={120}
+                    height={120}
+                    className="h-12 w-12 p-2 transition-transform duration-300 hover:scale-125"
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>LinkedIn</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
 
           {/* Title + Intro */}
@@ -98,43 +93,149 @@ export default async function Home() {
             <h1 className="mb-4 text-center text-4xl font-extrabold tracking-tight sm:text-5xl">
               Sammy{": "}
               <span className="text-primary">
-                Software Enginer / Backend Developer / Analyst
+                Junior Backend / Full-Stack Software Engineer
               </span>
             </h1>
-            <h3 className="text-primary mt-4 text-xl font-bold">About Me -</h3>
-            <p className="mt-2 max-w-3xl">
-              In my free time, I&apos;m usually self-learning / practicing
-              backend development projects with Python, Go, some C, or messing
-              around in NeoVim, and probably playing around with my Arch Linux /
-              Omarchy layout.
-              <br />
-              <br />
-              OR I&apos;m messing around with my homelab testing out projects to
-              run behind my reverse proxy, or expanding my server rack, or
-              running ethernet cable through the attic for PoE cameras, stuff
-              like that.
-              <br />
-              <br />
+
+            {/* Short "hero" summary – recruiter-facing */}
+            <p className="text-muted-foreground mt-2 text-center text-lg">
+              I build internal tools, dashboards, and backend APIs using Python,
+              Go, SQL, and TypeScript (Next.js). Recently I&apos;ve been the de
+              facto full-stack engineer for a small to medium business (SMB),
+              consolidating sales/inventory/staffing data and shipping in-house
+              web apps that power day-to-day operations.
             </p>
-            <p className="text-primary/90 dark:text-primary items-center text-center text-lg font-bold">
-              Psssst...{" "}
+
+            <h3 className="text-primary mt-6 text-xl font-bold">About Me</h3>
+            <p className="mt-2 max-w-5xl">
+              Outside of work, I&apos;m usually leveling up my backend skills
+              with Python, Go, and some C (Boot.dev backend track), tinkering in
+              NeoVim, or experimenting with my Arch Linux / Omarchy setup. I
+              also run a small homelab where I test services behind a reverse
+              proxy, expand my server rack, and terminating my own ethernet
+              cables for PoE cameras and other toys.
+            </p>
+
+            <p className="text-primary/90 dark:text-primary mt-4 text-center text-lg font-bold">
+              Interested in a junior backend or full-stack SWE?{" "}
               <span className="text-destructive font-extrabold">
-                [Sign In Up Top]{" "}
+                Email: sammy@kozykoding.com
               </span>
-              to access hidden links & see my authentication integration!
+            </p>
+
+            {/* Keep the auth tease if you want, but make it secondary */}
+            <p className="text-muted-foreground mt-2 text-center text-sm">
+              Pssst...{" "}
+              <span className="text-destructive text-lg font-extrabold font-semibold">
+                sign in up top
+              </span>{" "}
+              to access hidden links and see my authentication integration.
             </p>
           </div>
         </section>
 
-        {/* Tech badges */}
-        <section className="container mx-auto mt-10 max-w-5xl">
-          <h3 className="text-primary mt-4 text-xl font-bold">
-            Dev Showcase -
-          </h3>
-          <p className="text-muted-foreground mb-3 max-w-xl text-base leading-relaxed">
-            Here&apos;s some of the tech involved with making this site:
+        {/* Projects */}
+        <section className="container mx-auto mt-12 max-w-5xl">
+          <h3 className="text-primary text-xl font-bold">Projects</h3>
+          <p className="text-muted-foreground mt-1 mb-4 max-w-xl text-base leading-relaxed">
+            A few things I&apos;ve been working on. These are small, focused
+            projects that show how I build backend-heavy apps and tools.
           </p>
-          <div className="flex flex-wrap items-center justify-center space-x-4">
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Audits Dashboard */}
+            <div className="border-border bg-card rounded-lg border p-4">
+              <h4 className="text-lg font-semibold">Audits Dashboard</h4>
+              <p className="text-muted-foreground mt-1 text-sm">
+                My first attempt at a full stack SaaS for employee management,
+                firearms sales and inventory (ATF/DOJ-style audits). It is also
+                where I first tried AI integration using Cursor as my IDE.
+              </p>
+              <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
+                Stack: TypeScript, Next.js, backend API + PostgreSQL
+              </p>
+              <div className="mt-3 flex gap-3 text-sm">
+                <Link
+                  href="https://github.com/kozykoding/audits-dashboard"
+                  className="text-primary underline underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code
+                </Link>
+              </div>
+            </div>
+
+            {/* Kozyhome */}
+            <div className="border-border bg-card rounded-lg border p-4">
+              <h4 className="text-lg font-semibold">Kozyhome</h4>
+              <p className="text-muted-foreground mt-1 text-sm">
+                Personal site / UI playground built with Next.js. I use this to
+                test UI patterns, auth flows, and component libraries.
+              </p>
+              <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
+                Stack: TypeScript, Next.js, Tailwind CSS
+              </p>
+              <div className="mt-3 flex gap-3 text-sm">
+                <Link
+                  href="https://github.com/kozykoding/kozyhome"
+                  className="text-primary underline underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code
+                </Link>
+              </div>
+            </div>
+
+            {/* Bookbot */}
+            <div className="border-border bg-card rounded-lg border p-4">
+              <h4 className="text-lg font-semibold">Bookbot (Boot.dev)</h4>
+              <p className="text-muted-foreground mt-1 text-sm">
+                CLI text analysis tool that reads a book file and outputs stats
+                like word counts and character frequencies. Part of
+                Boot.dev&apos;s Python backend curriculum.
+              </p>
+              <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
+                Stack: Python
+              </p>
+              <div className="mt-3 flex gap-3 text-sm">
+                <Link
+                  href="https://github.com/kozykoding/bookbot"
+                  className="text-primary underline underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code
+                </Link>
+              </div>
+            </div>
+
+            {/* Future backend projects */}
+            <div className="border-border bg-card/40 rounded-lg border border-dashed p-4">
+              <h4 className="text-lg font-semibold">
+                WIP: More Backend Projects
+              </h4>
+              <p className="text-muted-foreground mt-1 text-sm">
+                I&apos;m planning to post more public repos as I make my way
+                through Boot.Dev to showcase my increased backend skills
+                end-to-end.
+              </p>
+              <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
+                Stack: Python / Go, FastAPI or similar, C
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Tech badges */}
+        <section className="container mx-auto mt-12 max-w-5xl">
+          <h3 className="text-primary mt-4 text-xl font-bold">Dev Stack</h3>
+          <p className="text-muted-foreground mb-3 max-w-xl text-base leading-relaxed">
+            Some of the tech involved in this site and my day-to-day dev
+            environment:
+          </p>
+          <div className="mb-4 flex flex-wrap items-center justify-center gap-4">
             <Tooltip>
               <TooltipTrigger asChild>
                 <Image
@@ -149,6 +250,7 @@ export default async function Home() {
                 <p>Bun Runtime</p>
               </TooltipContent>
             </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Image
@@ -163,62 +265,22 @@ export default async function Home() {
                 <p>React</p>
               </TooltipContent>
             </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Image
                   src={nextjs}
-                  alt="NextJS logo"
+                  alt="Next.js logo"
                   width={120}
                   height={120}
                   className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
                 />
               </TooltipTrigger>
               <TooltipContent>
-                <p>NextJS</p>
+                <p>Next.js</p>
               </TooltipContent>
             </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Image
-                  src={ghostty}
-                  alt="Ghostty logo"
-                  width={120}
-                  height={120}
-                  className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-                />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Ghostty Terminal</p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Image
-                  src={archlinux}
-                  alt="Arch Linux logo"
-                  width={120}
-                  height={120}
-                  className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-                />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Arch Linux (btw...)</p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Image
-                  src={vercel}
-                  alt="Vercel logo"
-                  width={120}
-                  height={120}
-                  className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
-                />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Vercel</p>
-              </TooltipContent>
-            </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Image
@@ -233,13 +295,53 @@ export default async function Home() {
                 <p>Tailwind CSS</p>
               </TooltipContent>
             </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Image
+                  src={vercel}
+                  alt="Vercel logo"
+                  width={120}
+                  height={120}
+                  className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+                />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Vercel</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Image
+                  src={archlinux}
+                  alt="Arch Linux logo"
+                  width={120}
+                  height={120}
+                  className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+                />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Arch Linux (btw...)</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Image
+                  src={ghostty}
+                  alt="Ghostty logo"
+                  width={120}
+                  height={120}
+                  className="h-20 w-20 p-2 transition-transform duration-300 hover:scale-105"
+                />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Ghostty Terminal</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
         </section>
-
-        {/* Latest Post */}
-        {/* <section className="mx-auto mt-12 max-w-3xl">
-      <LatestPost />
-    </section> */}
       </main>
     </HydrateClient>
   );
