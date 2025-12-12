@@ -152,6 +152,7 @@ export default function ResumePage() {
           <UL>
             <LI>Boot.Dev Python Certification</LI>
             <LI>Boot.Dev Backend Development With C and Go (in progress)</LI>
+            <LI>AWS Cloud Practictioner Certification (in progress)</LI>
             <LI>CompTIA Network+ (in progress)</LI>
             <LI>CompTIA Security+ (in progress)</LI>
           </UL>
