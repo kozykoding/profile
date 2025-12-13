@@ -1,4 +1,5 @@
 import pythoncert from "~/assets/pythoncert.png";
+import oopcert from "~/assets/OOP_certificate.png";
 import coe from "~/assets/coe.jpg";
 import Image from "next/image";
 import {
@@ -34,6 +35,21 @@ export default function Certs() {
             </TooltipContent>
           </Tooltip>
         </div>
+        <div>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Image
+                src={oopcert}
+                alt="OOP Cert"
+                className="h-full w-full p-2 transition-transform duration-300 hover:scale-102"
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Object Oriented Programming Certification</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+
         <div>
           <Tooltip>
             <TooltipTrigger asChild>
