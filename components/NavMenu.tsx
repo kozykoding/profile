@@ -114,7 +114,7 @@ export function NavMenu() {
                     <Link href="https://kozyy.app/" target="_blank">
                       <div className="font-medium">KozyyPM</div>
                       <div className="text-muted-foreground">
-                        My Project Management app.
+                        My Project Management SaaS app.
                       </div>
                     </Link>
                   </NavigationMenuLink>
