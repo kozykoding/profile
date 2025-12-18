@@ -111,6 +111,14 @@ export function NavMenu() {
               <ul className="grid w-[300px] gap-4">
                 <li>
                   <NavigationMenuLink asChild>
+                    <Link href="https://gokozyy.space" target="_blank">
+                      <div className="font-medium">Kozyy Go</div>
+                      <div className="text-muted-foreground">
+                        My React + Go app.
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
                     <Link href="https://kozyy.app/" target="_blank">
                       <div className="font-medium">KozyyPM</div>
                       <div className="text-muted-foreground">

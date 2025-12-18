@@ -143,6 +143,28 @@ export default async function Home() {
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
+            {/* Kozyhome */}
+            <div className="border-border bg-card rounded-lg border p-4">
+              <h4 className="text-lg font-semibold">Kozyy Go</h4>
+              <p className="text-muted-foreground mt-1 text-sm">
+                My React + Go playground. I use this to test UI patterns, and
+                component libraries.
+              </p>
+              <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
+                Stack: Go, Vite React, TypeScript, Tailwind CSS, ShadCN
+              </p>
+              <div className="mt-3 flex gap-3 text-sm">
+                <Link
+                  href="https://github.com/kozykoding/go-react-bun"
+                  className="text-primary underline underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code
+                </Link>
+              </div>
+            </div>
+
             {/* Audits Dashboard */}
             <div className="border-border bg-card rounded-lg border p-4">
               <h4 className="text-lg font-semibold">Audits Dashboard</h4>
@@ -157,29 +179,6 @@ export default async function Home() {
               <div className="mt-3 flex gap-3 text-sm">
                 <Link
                   href="https://github.com/kozykoding/audits-dashboard"
-                  className="text-primary underline underline-offset-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View code
-                </Link>
-              </div>
-            </div>
-
-            {/* Kozyhome */}
-            <div className="border-border bg-card rounded-lg border p-4">
-              <h4 className="text-lg font-semibold">Kozyhome</h4>
-              <p className="text-muted-foreground mt-1 text-sm">
-                Personal site to keep track of bills / UI playground built with
-                Next.js. I use this to test UI patterns, and component
-                libraries.
-              </p>
-              <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
-                Stack: TypeScript, Next.js, Tailwind CSS
-              </p>
-              <div className="mt-3 flex gap-3 text-sm">
-                <Link
-                  href="https://github.com/kozykoding/kozyhome"
                   className="text-primary underline underline-offset-4"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -212,19 +211,25 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Future backend projects */}
-            <div className="border-border bg-card/40 rounded-lg border border-dashed p-4">
-              <h4 className="text-lg font-semibold">
-                WIP: More Backend Projects
-              </h4>
+            {/* Asteroids */}
+            <div className="border-border bg-card rounded-lg border p-4">
+              <h4 className="text-lg font-semibold">Asteroids (Python)</h4>
               <p className="text-muted-foreground mt-1 text-sm">
-                I&apos;m planning to post more public repos as I make my way
-                through Boot.Dev to showcase my increased backend skills
-                end-to-end.
+                CLI Asteroids game!
               </p>
               <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
-                Stack: Python / Go, FastAPI or similar, C
+                Stack: Python
               </p>
+              <div className="mt-3 flex gap-3 text-sm">
+                <Link
+                  href="https://github.com/kozykoding/asteroids"
+                  className="text-primary underline underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View code
+                </Link>
+              </div>
             </div>
           </div>
         </section>
