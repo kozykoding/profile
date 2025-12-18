@@ -190,11 +190,10 @@ export default async function Home() {
 
             {/* Bookbot */}
             <div className="border-border bg-card rounded-lg border p-4">
-              <h4 className="text-lg font-semibold">Bookbot (Boot.dev)</h4>
+              <h4 className="text-lg font-semibold">Bookbot</h4>
               <p className="text-muted-foreground mt-1 text-sm">
                 CLI text analysis tool that reads a book file and outputs stats
-                like word counts and character frequencies. Part of
-                Boot.dev&apos;s Python backend curriculum.
+                like word counts and character frequencies.
               </p>
               <p className="text-primary mt-2 text-xs font-medium tracking-wide uppercase">
                 Stack: Python
