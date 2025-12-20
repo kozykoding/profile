@@ -1,4 +1,5 @@
 import pythoncert from "~/assets/pythoncert.png";
+import sqlcert from "~/assets/sql_certificate.png";
 import oopcert from "~/assets/OOP_certificate.png";
 import coe from "~/assets/coe.jpg";
 import Image from "next/image";
@@ -46,6 +47,20 @@ export default function Certs() {
             </TooltipTrigger>
             <TooltipContent>
               <p>Object Oriented Programming Certification</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+        <div>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Image
+                src={sqlcert}
+                alt="SQL Cert"
+                className="h-full w-full p-2 transition-transform duration-300 hover:scale-102"
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>SQL Certification</p>
             </TooltipContent>
           </Tooltip>
         </div>
