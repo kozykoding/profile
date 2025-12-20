@@ -131,6 +131,17 @@ export default function ResumePage() {
           />
 
           <Job
+            role="Project Lead"
+            meta="Proactive Business Solutions — Hayward, CA | Sep 2015 – Sep 2018"
+            bullets={[
+              "Led large teams on projects handling physical cable management (including creating and distributing long bundles of RJ45 cables), troubleshoot networking, workstation and telephony systems, and PC workstations and server maintenance (configuring pfSense and Unifi networks along with configuring VLANS and firewalls).",
+              "Provided detailed documentation for stakeholders on project planning, progression and delivery, meeting all deadlines.",
+              "Use troubleshooting methodology to provide efficient, effective and documented support.",
+              "Contract working experience in highly regulated settings such as Kaiser Permanente hospitals, Google campus, Apple campus, Amazon AWS locations.",
+              "JBOD server management along with array rebuilding when replacing drives as needed.",
+            ]}
+          />
+          <Job
             role="Workforce Analyst"
             meta="VoxPro — Sacramento, CA | Jan 2016 – Dec 2018"
             bullets={[
