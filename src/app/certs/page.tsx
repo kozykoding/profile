@@ -1,4 +1,5 @@
 import pythoncert from "~/assets/pythoncert.png";
+import gocert from "~/assets/go_certificate.png";
 import sqlcert from "~/assets/sql_certificate.png";
 import oopcert from "~/assets/OOP_certificate.png";
 import coe from "~/assets/coe.jpg";
@@ -22,6 +23,20 @@ export default function Certs() {
         </p>
       </div>
       <div className="mx-auto grid w-full grid-cols-2 flex-col p-6 print:px-8 print:py-6">
+        <div>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Image
+                src={gocert}
+                alt="Go Cert"
+                className="h-full w-full p-2 transition-transform duration-300 hover:scale-102"
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Go Certification</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
         <div>
           <Tooltip>
             <TooltipTrigger asChild>

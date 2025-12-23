@@ -26,7 +26,7 @@ export default function ResumePage() {
           <div className="flex flex-wrap gap-2">
             {[
               "Data clean-ups",
-              "Detail-oriented",
+              "Go",
               "Python",
               "SQL",
               "Excel/Google Sheets",
@@ -161,13 +161,11 @@ export default function ResumePage() {
           <br />
           <SectionHeading>Certifications</SectionHeading>
           <UL>
+            <LI>Go Certification</LI>
             <LI>Python Certification</LI>
             <LI>Object Oriented Programming Certification</LI>
             <LI>SQL Certification</LI>
-            <LI>Boot.Dev Backend Development With C and Go (in progress)</LI>
             <LI>AWS Cloud Practictioner Certification (in progress)</LI>
-            <LI>CompTIA Network+ (in progress)</LI>
-            <LI>CompTIA Security+ (in progress)</LI>
           </UL>
         </section>
       </div>
